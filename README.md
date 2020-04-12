@@ -6,7 +6,7 @@
 * [Функции](functions.md)
 * [Всплытие](hoisting.md)
 * [Циклы](loops.md)
-* [Объекты](objects.md)
+* [Объекты *[WorkInProgress]*](objects.md)
 * [Область видимости](scope.md)
 * [Типы данных](types.md)
 * [Переменные](variables.md)
