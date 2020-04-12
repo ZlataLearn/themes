@@ -32,7 +32,7 @@ const getReadmeTOC = (data) => `# Список файлов
 
 ${data
 	.map(
-		({ title, filename, definition }) => `* [${title}](${filename})
+		({ title, filename, definition }) => `**[${title}](${filename})**
 > ${definition}`
 	)
 	.join("\n\n")}
