@@ -33,13 +33,9 @@
 # С чего начать
 
 * [Переменные](variables.md)
-
 * [Типы](types.md)
-
 * [Условия](conditions.md)
-
 * [Циклы](loops.md)
-
 * [Функции](functions.md)
 
 # TODO
