@@ -18,7 +18,7 @@ const linkRegex = /\[([^\]]*)\]\(([^)]*\.md)\)/giu;
 
 const getReadmeTODO = (unusedLinks) => `# TODO (ссылки, которые никуда не ведут)
 
-${unusedLinks.map(({filename, from}) => `* ${filename} *(из файла ${from})*`).join('\n')}
+${unusedLinks.map(({filename, from}) => `* ${filename} *(из файла [${from}](${from}))*`).join('\n')}
 
 `;
 
