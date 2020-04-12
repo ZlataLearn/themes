@@ -20,13 +20,22 @@ const getReadmeTODO = (unusedLinks) => `# TODO
 
 *Cсылки, которые никуда не ведут*
 
-${unusedLinks.map(({filename, from}) => `* ${filename} *(из файла [${from}](${from}))*`).join('\n')}
+${unusedLinks
+	.map(
+		({ filename, from }) => `* ${filename} *(из файла [${from}](${from}))*`
+	)
+	.join("\n")}
 
 `;
 
 const getReadmeTOC = (data) => `# Список файлов
 
-${data.map(({ title, filename }) => `* [${title}](${filename})`).join("\n")}
+${data
+	.map(
+		({ title, filename, definition }) => `* [${title}](${filename})
+> ${definition}`
+	)
+	.join("\n\n")}
 
 `;
 
@@ -46,11 +55,20 @@ glob(__dirname + "/*.md", {}, async (err, files) => {
 				return false;
 			}
 			const data = await readFileP(file);
-			const title = data
-				.split("\n")
+			const lines = data.split("\n");
+			const title = lines
 				.find((line) => line.slice(0, 2) === "# ")
 				.slice(2)
 				.trim();
+			const definition = (() => {
+				const index = lines.findIndex((line) =>
+					line.includes("## Определение")
+				);
+				if (index === -1) {
+					return "";
+				}
+				return lines[index + 2].trim();
+			})();
 			const unusedLinks = [];
 			{
 				let result;
@@ -64,24 +82,27 @@ glob(__dirname + "/*.md", {}, async (err, files) => {
 					}
 					unusedLinks.push({
 						filename,
-						from: currentFileName
-					})
+						from: currentFileName,
+					});
 				}
 			}
 			return {
 				title,
 				filename: currentFileName,
+				definition,
 				unusedLinks,
 			};
 		});
 		const data = (await Promise.all(promises)).filter((item) => item);
 		const readmeTOC = getReadmeTOC(data);
 		const unusedLinks = data.reduce((acc, item) => {
-			item.unusedLinks.forEach(link => {
-				if (!acc.some((accItem) => accItem.filename === link.filename)) {
-					acc.push(link)
+			item.unusedLinks.forEach((link) => {
+				if (
+					!acc.some((accItem) => accItem.filename === link.filename)
+				) {
+					acc.push(link);
 				}
-			})
+			});
 			return acc;
 		}, []);
 		const readmeTODO = getReadmeTODO(unusedLinks);
