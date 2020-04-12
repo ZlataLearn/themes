@@ -180,9 +180,9 @@ Object.defineProperty(object, 'newKey', {
 > ```javascript
 > let realCounter = 0;
 > Object.defineProperty(object, 'counter', {
->   get: function () { // или сокращенно get() {, что было бы эквивалентно
->     return realCounter++;
->   }
+>     get: function () { // или сокращенно get() {, что было бы эквивалентно
+>       return realCounter++;
+>     }
 > });
 > ```
 >
