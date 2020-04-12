@@ -28,6 +28,20 @@ ${unusedLinks
 
 `;
 
+const README_GETTING_STARTED = `# С чего начать
+
+* [Переменные](variables.md)
+
+* [Типы](types.md)
+
+* [Условия](conditions.md)
+
+* [Циклы](loops.md)
+
+* [Функции](functions.md)
+
+`;
+
 const getReadmeTOC = (data) => `# Список файлов
 
 ${data
@@ -106,11 +120,15 @@ glob(__dirname + "/*.md", {}, async (err, files) => {
 			return acc;
 		}, []);
 		const readmeTODO = getReadmeTODO(unusedLinks);
-		fs.writeFile(README_FILENAME, `${readmeTOC}${readmeTODO}`, (err) => {
-			if (err) {
-				console.log(err);
+		fs.writeFile(
+			README_FILENAME,
+			`${readmeTOC}${README_GETTING_STARTED}${readmeTODO}`,
+			(err) => {
+				if (err) {
+					console.log(err);
+				}
 			}
-		});
+		);
 	} catch (e) {
 		console.log(e);
 	}
