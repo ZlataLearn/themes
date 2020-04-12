@@ -16,7 +16,9 @@ const readFileP = (file) =>
 
 const linkRegex = /\[([^\]]*)\]\(([^)]*\.md)\)/giu;
 
-const getReadmeTODO = (unusedLinks) => `# TODO (ссылки, которые никуда не ведут)
+const getReadmeTODO = (unusedLinks) => `# TODO
+
+*Cсылки, которые никуда не ведут*
 
 ${unusedLinks.map(({filename, from}) => `* ${filename} *(из файла [${from}](${from}))*`).join('\n')}
 

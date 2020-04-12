@@ -11,7 +11,9 @@
 * [Типы данных](types.md)
 * [Переменные](variables.md)
 
-# TODO (ссылки, которые никуда не ведут)
+# TODO
+
+*Cсылки, которые никуда не ведут*
 
 * this.md *(из файла [functions.md](functions.md))*
 * clean_functions.md *(из файла [functions.md](functions.md))*
