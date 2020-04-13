@@ -27,6 +27,9 @@
 **[Область видимости](scope.md)**
 > **Область видимости** это совокупность правил, по которым выполняется поиск [переменных](variables.md) при их использовании.
 
+**[Контекст, `this`](this.md)**
+> **`this`** – специальный идентификатор, создаваемый при вызове функции и указывающий на "владеющий" или "содержащий" объект. Также называют контекстом.
+
 **[Типы данных](types.md)**
 > В зависимости от **типа данных** над значениями возможны различные операции (как, например, сложение над числами или измерение длины у строк).
 
@@ -45,13 +48,14 @@
 
 *Cсылки, которые никуда не ведут*
 
-* this.md *[src](functions.md)*
 * clean_functions.md *[src](functions.md)*
 * hof.md *[src](functions.md)*
 * arrays.md *[src](loops.md)*
 * constructors.md *[src](objects.md)*
 * spread_rest_destructuring.md *[src](objects.md)*
 * strict_mode.md *[src](scope.md)*
+* prototype.md *[src](this.md)*
+* prototypes.md *[src](this.md)*
 * template_strings.md *[src](types.md)*
 * classes.md *[src](types.md)*
 
