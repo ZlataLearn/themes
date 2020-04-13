@@ -45,13 +45,13 @@
 
 *Cсылки, которые никуда не ведут*
 
-* this.md *[?](functions.md)*
-* clean_functions.md *[?](functions.md)*
-* hof.md *[?](functions.md)*
-* arrays.md *[?](loops.md)*
-* constructors.md *[?](objects.md)*
-* spread_rest_destructuring.md *[?](objects.md)*
-* strict_mode.md *[?](scope.md)*
-* template_strings.md *[?](types.md)*
-* classes.md *[?](types.md)*
+* this.md *[src](functions.md)*
+* clean_functions.md *[src](functions.md)*
+* hof.md *[src](functions.md)*
+* arrays.md *[src](loops.md)*
+* constructors.md *[src](objects.md)*
+* spread_rest_destructuring.md *[src](objects.md)*
+* strict_mode.md *[src](scope.md)*
+* template_strings.md *[src](types.md)*
+* classes.md *[src](types.md)*
 
