@@ -55,7 +55,6 @@
 * spread_rest_destructuring.md *[src](objects.md)*
 * strict_mode.md *[src](scope.md)*
 * prototype.md *[src](this.md)*
-* prototypes.md *[src](this.md)*
 * template_strings.md *[src](types.md)*
 * classes.md *[src](types.md)*
 
