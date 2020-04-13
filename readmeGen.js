@@ -22,7 +22,7 @@ const getReadmeTODO = (unusedLinks) => `# TODO
 
 ${unusedLinks
 	.map(
-		({ filename, from }) => `* ${filename} *[?](${from})*`
+		({ filename, from }) => `* ${filename} *[src](${from})*`
 	)
 	.join("\n")}
 
