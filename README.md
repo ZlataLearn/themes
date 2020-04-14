@@ -57,4 +57,5 @@
 * prototype.md *[src](this.md)*
 * template_strings.md *[src](types.md)*
 * classes.md *[src](types.md)*
+* object_to_primitive.md *[src](types.md)*
 
