@@ -9,6 +9,9 @@
 **[Условия](conditions.md)**
 > **Условия** – конструкция языка, позволяющая "ветвить" выполнение кода, выполняя его части в зависимости от выполнения условий.
 
+**[Конструкторы](constructors.md)**
+> **Конструктор** – любая функция (кроме стрелочных), вызванная с  оператором `new`. Предназначены для создания (конструирования) новых объектов.
+
 **[Операторы сравнения](equality_operators.md)**
 > **Операторы сравнения** – операторы, позволяющие сравнивать пары значений. Возвращают `boolean`.
 
@@ -50,13 +53,12 @@
 
 *Cсылки, которые никуда не ведут*
 
+* prototype.md *[src](constructors.md)*
 * clean_functions.md *[src](functions.md)*
 * hof.md *[src](functions.md)*
 * arrays.md *[src](loops.md)*
-* constructors.md *[src](objects.md)*
 * spread_rest_destructuring.md *[src](objects.md)*
 * strict_mode.md *[src](scope.md)*
-* prototype.md *[src](this.md)*
 * template_strings.md *[src](types.md)*
 * classes.md *[src](types.md)*
 * object_to_primitive.md *[src](types.md)*
