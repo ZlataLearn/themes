@@ -161,9 +161,12 @@ const foo = function () {
   }
   return bar;
 }
-const a = { a: 'b' };
-const bar = foo.call(a); // в foo this === a
-bar.call({}); // выведет { a: 'b' }, так как в момент создания в foo this указывал на a
+const a = { a: 'a' };
+const b = { b: 'b' };
+const barWithA = foo.call(a); // в foo this === a
+const barWithB = foo.call(b); // в foo this === b
+barWithA(); // выведет { a: 'a' }, так как в момент создания в foo this указывал на a
+barWithB(); // выведет { b: 'b' }, так как в момент создания в foo this указывал на b
 ```
 
 ## Задание
