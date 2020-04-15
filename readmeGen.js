@@ -21,9 +21,7 @@ const getReadmeTODO = (unusedLinks) => `# TODO
 *Cсылки, которые никуда не ведут*
 
 ${unusedLinks
-	.map(
-		({ filename, from }) => `* ${filename} *[src](${from})*`
-	)
+	.map(({ filename, from }) => `* ${filename} *[src](${from})*`)
 	.join("\n")}
 
 `;
@@ -42,8 +40,13 @@ const getReadmeTOC = (data) => `# Список файлов
 
 ${data
 	.map(
-		({ title, filename, definition }) => `**[${title}](${filename})**
+		({ title, filename, definition }) =>
+			`**[${title}](${filename})**${
+				definition
+					? `
 > ${definition}`
+					: ""
+			}`
 	)
 	.join("\n\n")}
 
