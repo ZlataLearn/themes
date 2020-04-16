@@ -74,9 +74,18 @@ glob(__dirname + "/*.md", {}, async (err, files) => {
 				.slice(2)
 				.trim();
 			const definition = (() => {
-				const index = lines.findIndex((line) =>
-					line.includes("## Определение")
-				);
+				const index = (() => {
+					const definitionTitleIndex = lines.findIndex((line) =>
+						line.includes("## Определение")
+					);
+					if (definitionTitleIndex !== -1) {
+						return definitionTitleIndex;
+					}
+					const fileTitleIndex = lines.findIndex(
+						(line) => line.slice(0, 2) === "# "
+					);
+					return fileTitleIndex;
+				})();
 				if (index === -1) {
 					return "";
 				}
