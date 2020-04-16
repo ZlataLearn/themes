@@ -122,3 +122,65 @@ const obj = {
 obj.getKeys(); // => []
 ```
 
+## Функции высшего порядка
+
+### Логгер
+
+Реализуйте функцию, которая модифицирует любые другие функции, добавляя логгирование с помощью `console.log`.
+
+```javascript
+const sum = withLogger((a, b, c) => {
+  return a + b + c;
+});
+
+const s = sum(1, 2, 3);
+/* 
+  В лог попадет:
+  Входные аргументы 1 2 3
+  Результат 6
+*/
+console.log(s === 6); // true
+
+// или
+
+const objectsAreEqual = withLogger(function objectsAreEqual(obj, anotherObj) {
+  for (key in anotherObj) {
+    if (key in obj) {
+      continue;
+    }
+    return false;
+  }
+
+  for (key in obj) {
+    if (key in anotherObj) {
+      if (
+        obj[key] != anotherObj[key] &&
+        obj[key] instanceof Object &&
+        anotherObj[key] instanceof Object
+      ) {
+        if (objectsAreEqual(obj[key], anotherObj[key])) {
+          continue;
+        }
+        return false;
+      }
+      if (obj[key] === anotherObj[key]) {
+        continue;
+      }
+      return false;
+    }
+  }
+
+  return true;
+});
+
+const equal = objectsAreEqual(
+  { a: 'a', b: false }, 
+  { a: 'a', b: false }
+);
+/* 
+  В лог попадет:
+  Входные аргументы { a: 'a', b: false } { a: 'a', b: false }
+  Результат true
+*/
+console.log(equal); // true
+```
