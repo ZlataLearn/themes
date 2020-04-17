@@ -157,10 +157,12 @@ const objectsAreEqual = withLogger(function objectsAreEqual(left, right) {
       return false;
     }
 
-    if (left[key] !== right[key]) {
-      if (left[key] instanceof Object && right[key] instanceof Object) {
-        const isEqual = objectsAreEqual(left[key], right[key]);
-        if (!isEqual) {
+    const leftOne = left[key];
+    const rightOne = right[key];
+
+    if (leftOne !== rightOne) {
+      if ([leftOne, rightOne].every((value) => value instanceof Object)) {
+        if (!objectsAreEqual(leftOne, rightOne)) {
           return false;
         }
       } else {
