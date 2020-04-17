@@ -217,3 +217,4 @@ const counter = new Counter(2);
 counter.increment(10).decrement(5).getValue(); // 7
 ```
 
+> Чейнинг должны поддерживать только методы кроме `getValue` 
