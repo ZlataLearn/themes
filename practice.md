@@ -145,30 +145,27 @@ console.log(s === 6); // true
 
 // или
 
-const objectsAreEqual = withLogger(function objectsAreEqual(obj, anotherObj) {
-  for (key in anotherObj) {
-    if (key in obj) {
-      continue;
+const objectsAreEqual = withLogger(function objectsAreEqual(left, right) {
+  for (key in left) {
+    if (!(key in right)) {
+      return false;
     }
-    return false;
   }
 
-  for (key in obj) {
-    if (key in anotherObj) {
-      if (
-        obj[key] != anotherObj[key] &&
-        obj[key] instanceof Object &&
-        anotherObj[key] instanceof Object
-      ) {
-        if (objectsAreEqual(obj[key], anotherObj[key])) {
-          continue;
+  for (key in right) {
+    if (!(key in left)) {
+      return false;
+    }
+
+    if (left[key] !== right[key]) {
+      if (left[key] instanceof Object && right[key] instanceof Object) {
+        const isEqual = objectsAreEqual(left[key], right[key]);
+        if (!isEqual) {
+          return false;
         }
+      } else {
         return false;
       }
-      if (obj[key] === anotherObj[key]) {
-        continue;
-      }
-      return false;
     }
   }
 
