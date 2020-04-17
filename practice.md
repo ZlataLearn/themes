@@ -185,3 +185,32 @@ const equal = objectsAreEqual(
 */
 console.log(equal); // true
 ```
+
+## Конструкторы
+
+### Счетчик
+
+Реализуйте конструктор `Counter`, который будет создавать объект, который можно будет использовать следующим образом:
+
+```javascript
+const counter = new Counter(); // или new Counter(10) для начального значения
+counter.increment(); 
+counter.increment();
+counter.decrement();
+console.log(counter.getValue()); // 1
+counter.increment(100);
+counter.decrement(4);
+console.log(counter.getValue()); // 97
+counter.reset();
+console.log(counter.getValue()); // 0 или, если было, начальное значение
+```
+
+### Счетчик + chaining
+
+Добавьте к счетчику из прошлого задания возможность чейнинга:
+
+```javascript
+const counter = new Counter(2);
+counter.increment(10).decrement(5).getValue(); // 7
+```
+
