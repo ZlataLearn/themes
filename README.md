@@ -15,6 +15,9 @@
 **[Конструкторы](constructors.md)**
 > **Конструктор** – любая функция (кроме стрелочных), вызванная с  оператором `new`. Предназначены для создания (конструирования) новых объектов.
 
+**[Деструктуризация](destructuring.md)**
+> **Деструктуризация** –  это особый синтаксис присваивания, при котором можно присвоить массив или объект сразу нескольким переменным, разбив его на части.
+
 **[Операторы сравнения](equality_operators.md)**
 > **Операторы сравнения** – операторы, позволяющие сравнивать пары значений. Возвращают `boolean`.
 
@@ -61,11 +64,12 @@
 *Cсылки, которые никуда не ведут*
 
 * prototype.md *[src](constructors.md)*
+* iterators.md *[src](destructuring.md)*
+* generators.md *[src](destructuring.md)*
 * hof.md *[src](functions.md)*
 * arrays.md *[src](loops.md)*
 * spread_rest_destructuring.md *[src](objects.md)*
 * strict_mode.md *[src](scope.md)*
-* destructuring.md *[src](spread_rest.md)*
 * template_strings.md *[src](types.md)*
 * classes.md *[src](types.md)*
 * object_to_primitive.md *[src](types.md)*
