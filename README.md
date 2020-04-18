@@ -68,7 +68,7 @@
 * generators.md *[src](destructuring.md)*
 * hof.md *[src](functions.md)*
 * arrays.md *[src](loops.md)*
-* spread_rest_destructuring.md *[src](objects.md)*
+* spread.md *[src](objects.md)*
 * strict_mode.md *[src](scope.md)*
 * template_strings.md *[src](types.md)*
 * classes.md *[src](types.md)*
