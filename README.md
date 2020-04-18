@@ -72,10 +72,10 @@
 
 *Cсылки, которые никуда не ведут*
 
-* iterators.md *[src](destructuring.md)*
-* generators.md *[src](destructuring.md)*
-* hof.md *[src](functions.md)*
-* arrays.md *[src](loops.md)*
-* strict_mode.md *[src](scope.md)*
-* classes.md *[src](types.md)*
+* iterators.md *[src1](destructuring.md)*
+* generators.md *[src1](destructuring.md)*
+* hof.md *[src1](functions.md)*
+* arrays.md *[src1](loops.md), [src2](this.md)*
+* strict_mode.md *[src1](scope.md), [src2](scope.md), [src3](scope.md), [src4](this.md)*
+* classes.md *[src1](types.md)*
 
