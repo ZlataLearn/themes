@@ -43,6 +43,8 @@ const README_GETTING_STARTED = `# С чего начать
 
 const getReadmeTOC = (data) => `# Список файлов
 
+*(файлов ${data.length})*
+
 ${data
 	.map(
 		({ title, filename, definition }) =>
