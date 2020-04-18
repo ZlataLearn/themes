@@ -14,6 +14,13 @@ const readFileP = (file) =>
 		});
 	});
 
+const getStatP = (file) =>
+	new Promise((resolve) => {
+		fs.stat(file, (_, stats) => {
+			resolve(stats);
+		});
+	});
+
 const linkRegex = /\[([^\]]*)\]\(([^)]*\.md)\)/giu;
 
 const getReadmeTODO = (unusedLinks) => `# TODO
@@ -59,7 +66,19 @@ ${data
 
 `;
 
-glob(__dirname + "/*.md", {}, async (err, files) => {
+const compareStats = (statsA, statsB) => statsA.birthtime - statsB.birthtime;
+
+glob(__dirname + "/*.md", { stat: true }, async (err, files) => {
+	const fileStatsArr = await Promise.all(files.map(getStatP));
+	const fileStats = fileStatsArr.reduce((acc, item, index) => {
+		acc[files[index]] = {
+			birthtime: item.birthtime,
+		};
+		return acc;
+	}, {});
+	files = files.sort((fileA, fileB) =>
+		compareStats(fileStats[fileA], fileStats[fileB])
+	);
 	if (err) {
 		return;
 	}
