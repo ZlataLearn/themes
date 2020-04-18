@@ -126,13 +126,13 @@ glob(__dirname + "/*.md", {}, async (err, files) => {
 		const readmeTOC = getReadmeTOC(data);
 		const unusedLinks = data.reduce((acc, item) => {
 			item.unusedLinks.forEach((link) => {
-				const similarIndex = acc.findIndex((accItem) => accItem.filename === link.filename);
-				if (
-					similarIndex === -1
-				) {
+				const similarIndex = acc.findIndex(
+					(accItem) => accItem.filename === link.filename
+				);
+				if (similarIndex === -1) {
 					acc.push(link);
 				} else {
-					acc[similarIndex].from.push(...link.from)
+					acc[similarIndex].from.push(...link.from);
 				}
 			});
 			return acc;
