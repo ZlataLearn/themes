@@ -21,7 +21,12 @@ const getReadmeTODO = (unusedLinks) => `# TODO
 *Cсылки, которые никуда не ведут*
 
 ${unusedLinks
-	.map(({ filename, from }) => `* ${filename} *[src](${from})*`)
+	.map(
+		({ filename, from }) =>
+			`* ${filename} *${from
+				.map((link, index) => `[src${index + 1}](${link})`)
+				.join(", ")}*`
+	)
 	.join("\n")}
 
 `;
@@ -104,7 +109,7 @@ glob(__dirname + "/*.md", {}, async (err, files) => {
 					}
 					unusedLinks.push({
 						filename,
-						from: currentFileName,
+						from: [currentFileName],
 					});
 				}
 			}
@@ -119,10 +124,13 @@ glob(__dirname + "/*.md", {}, async (err, files) => {
 		const readmeTOC = getReadmeTOC(data);
 		const unusedLinks = data.reduce((acc, item) => {
 			item.unusedLinks.forEach((link) => {
+				const similarIndex = acc.findIndex((accItem) => accItem.filename === link.filename);
 				if (
-					!acc.some((accItem) => accItem.filename === link.filename)
+					similarIndex === -1
 				) {
 					acc.push(link);
+				} else {
+					acc[similarIndex].from.push(...link.from)
 				}
 			});
 			return acc;
