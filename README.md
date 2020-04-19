@@ -74,4 +74,5 @@
 * strict_mode.md *[src1](scope.md), [src2](scope.md), [src3](scope.md), [src4](this.md)*
 * iterators.md *[src1](destructuring.md)*
 * generators.md *[src1](destructuring.md)*
+* array_useful_methods.md *[src1](arrays.md)*
 
