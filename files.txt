@@ -21,3 +21,4 @@ spread_rest.md
 object_to_primitive.md
 classes.md
 arrays.md
+async_basics.md
