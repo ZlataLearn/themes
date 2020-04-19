@@ -1,16 +1,6 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-[Назад](README.md)<br />**Содержание**
-
-- [Список файлов](#%D1%81%D0%BF%D0%B8%D1%81%D0%BE%D0%BA-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2)
-- [С чего начать](#%D1%81-%D1%87%D0%B5%D0%B3%D0%BE-%D0%BD%D0%B0%D1%87%D0%B0%D1%82%D1%8C)
-- [TODO](#todo)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # Список файлов
 
-*(файлов: 20)*
+*(файлов: 21)*
 
 **[Логические операторы](boolean_operators.md)**
 > **Логические операторы** – операторы, работающие со значениями, приводимыми к [типу](types.md) `boolean` ("да" и "нет"). Несмотря на это, результатом их работы могут быть значения любого типа.
@@ -72,6 +62,9 @@
 **[Шаблонные строки](template_strings.md)**
 > **Шаблонные строки** (или шаблонные литералы) – строки, допускающие использование выражений внутри. Заключены в обратные кавычки (`) вместо двойных или одинарных.
 
+**[Классы](classes.md)**
+> **Классы** в JavaScript – синтаксический сахар над механизмом конструкторов и прототипного наследования.
+
 # С чего начать
 
 * [Переменные](variables.md)
@@ -87,7 +80,6 @@
 * hof.md *[src1](functions.md)*
 * arrays.md *[src1](loops.md), [src2](this.md)*
 * strict_mode.md *[src1](scope.md), [src2](scope.md), [src3](scope.md), [src4](this.md)*
-* classes.md *[src1](types.md)*
 * iterators.md *[src1](destructuring.md)*
 * generators.md *[src1](destructuring.md)*
 
