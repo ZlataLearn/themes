@@ -59,7 +59,7 @@ glob(__dirname + "/*.md", {}, async (err, filesRaw) => {
 	{
 		const jsonFilePath = __dirname + "/files.txt";
 		const filesContent = await readFileP(jsonFilePath);
-		const filesArr = filesContent.split('\n').map(s => s.trim());
+		const filesArr = filesContent.split("\n").map((s) => s.trim());
 		files = [
 			...filesArr,
 			...filesRaw.filter(
@@ -69,10 +69,7 @@ glob(__dirname + "/*.md", {}, async (err, filesRaw) => {
 					)
 			),
 		];
-		writeFileP(
-			jsonFilePath,
-			files.map(getFileNameFromPath).join('\n')
-		);
+		writeFileP(jsonFilePath, files.map(getFileNameFromPath).join("\n"));
 	}
 	if (err) {
 		return;
@@ -152,15 +149,11 @@ glob(__dirname + "/*.md", {}, async (err, filesRaw) => {
 			return acc;
 		}, []);
 		const readmeTODO = getReadmeTODO(unusedLinks);
-		fs.writeFile(
-			README_FILENAME,
-			`${readmeTOC}${readmeTODO}`,
-			(err) => {
-				if (err) {
-					console.log(err);
-				}
+		fs.writeFile(README_FILENAME, `${readmeTOC}${readmeTODO}`, (err) => {
+			if (err) {
+				console.log(err);
 			}
-		);
+		});
 	} catch (e) {
 		console.log(e);
 	}
