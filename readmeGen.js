@@ -14,11 +14,9 @@ const readFileP = (file) =>
 		});
 	});
 
-const getStatP = (file) =>
+const writeFileP = (file, data) =>
 	new Promise((resolve) => {
-		fs.stat(file, (_, stats) => {
-			resolve(stats);
-		});
+		fs.writeFile(file, data, resolve);
 	});
 
 const linkRegex = /\[([^\]]*)\]\(([^)]*\.md)\)/giu;
@@ -35,16 +33,6 @@ ${unusedLinks
 				.join(", ")}*`
 	)
 	.join("\n")}
-
-`;
-
-const README_GETTING_STARTED = `# С чего начать
-
-* [Переменные](variables.md)
-* [Типы](types.md)
-* [Условия](conditions.md)
-* [Циклы](loops.md)
-* [Функции](functions.md)
 
 `;
 
@@ -66,25 +54,34 @@ ${data
 
 `;
 
-const compareStats = (statsA, statsB) => statsA.birthtime - statsB.birthtime;
+const getFileNameFromPath = (path) => path.split("/").reverse()[0];
 
-glob(__dirname + "/*.md", { stat: true }, async (err, files) => {
-	const fileStatsArr = await Promise.all(files.map(getStatP));
-	const fileStats = fileStatsArr.reduce((acc, item, index) => {
-		acc[files[index]] = {
-			birthtime: item.birthtime,
-		};
-		return acc;
-	}, {});
-	files = files.sort((fileA, fileB) =>
-		compareStats(fileStats[fileA], fileStats[fileB])
-	);
+glob(__dirname + "/*.md", {}, async (err, filesRaw) => {
+	let files = [];
+	{
+		const jsonFilePath = __dirname + "/files.json";
+		const filesJSON = await readFileP(jsonFilePath);
+		const filesArr = JSON.parse(filesJSON);
+		files = [
+			...filesArr,
+			...filesRaw.filter(
+				(file) =>
+					!filesArr.some(
+						(fileName) => fileName === getFileNameFromPath(file)
+					)
+			),
+		];
+		writeFileP(
+			jsonFilePath,
+			JSON.stringify(files.map(getFileNameFromPath), null, 2)
+		);
+	}
 	if (err) {
 		return;
 	}
 	try {
 		const fileNames = files.reduce((acc, path) => {
-			acc[path] = path.split("/").reverse()[0];
+			acc[path] = getFileNameFromPath(path);
 			return acc;
 		}, {});
 		const fileNamesArray = Object.values(fileNames);
@@ -159,7 +156,7 @@ glob(__dirname + "/*.md", { stat: true }, async (err, files) => {
 		const readmeTODO = getReadmeTODO(unusedLinks);
 		fs.writeFile(
 			README_FILENAME,
-			`${readmeTOC}${README_GETTING_STARTED}${readmeTODO}`,
+			`${readmeTOC}${readmeTODO}`,
 			(err) => {
 				if (err) {
 					console.log(err);
