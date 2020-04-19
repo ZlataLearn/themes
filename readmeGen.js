@@ -57,9 +57,9 @@ const getFileNameFromPath = (path) => path.split("/").reverse()[0];
 glob(__dirname + "/*.md", {}, async (err, filesRaw) => {
 	let files = [];
 	{
-		const jsonFilePath = __dirname + "/files.json";
-		const filesJSON = await readFileP(jsonFilePath);
-		const filesArr = JSON.parse(filesJSON);
+		const jsonFilePath = __dirname + "/files.txt";
+		const filesContent = await readFileP(jsonFilePath);
+		const filesArr = filesContent.split('\n').map(s => s.trim());
 		files = [
 			...filesArr,
 			...filesRaw.filter(
@@ -71,7 +71,7 @@ glob(__dirname + "/*.md", {}, async (err, filesRaw) => {
 		];
 		writeFileP(
 			jsonFilePath,
-			JSON.stringify(files.map(getFileNameFromPath), null, 2)
+			files.map(getFileNameFromPath).join('\n')
 		);
 	}
 	if (err) {
