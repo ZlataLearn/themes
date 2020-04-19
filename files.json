@@ -17,8 +17,8 @@
   "this.md",
   "constructors.md",
   "prototype.md",
-  "classes.md",
   "destructuring.md",
   "spread_rest.md",
-  "object_to_primitive.md"
+  "object_to_primitive.md",
+  "classes.md"
 ]
