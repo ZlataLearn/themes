@@ -63,11 +63,13 @@
 **21. [Классы](classes.md)**
 > **Классы** в JavaScript – синтаксический сахар над механизмом конструкторов и прототипного наследования.
 
+**22. [Массивы](arrays.md)**
+> **Массив** – структура, позволяющая хранить упорядоченную коллекцию данных. Как объекты, могут содержать значения любых [типов](types.md).
+
 # TODO
 
 *Cсылки, которые никуда не ведут*
 
-* arrays.md *[src1](loops.md), [src2](this.md)*
 * hof.md *[src1](functions.md)*
 * strict_mode.md *[src1](scope.md), [src2](scope.md), [src3](scope.md), [src4](this.md)*
 * iterators.md *[src1](destructuring.md)*

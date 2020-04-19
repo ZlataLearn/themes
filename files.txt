@@ -20,3 +20,4 @@ destructuring.md
 spread_rest.md
 object_to_primitive.md
 classes.md
+arrays.md
