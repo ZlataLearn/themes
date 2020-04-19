@@ -38,12 +38,10 @@ ${unusedLinks
 
 const getReadmeTOC = (data) => `# Список файлов
 
-*(файлов: ${data.length})*
-
 ${data
 	.map(
-		({ title, filename, definition }) =>
-			`**[${title}](${filename})**${
+		({ title, filename, definition }, index) =>
+			`**${index + 1}. [${title}](${filename})**${
 				definition
 					? `
 > ${definition}`
