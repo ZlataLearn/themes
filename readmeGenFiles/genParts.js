@@ -29,12 +29,8 @@ const getReadmeTOC = (data) => `# Список файлов
 ${data
 	.map(
 		({ title, filename, definition }, index) =>
-			`**${index + 1}. [${title}](${filename})**${
-				definition
-					? `
+			`**${index + 1}. [${title}](${filename})**
 > ${definition}`
-					: ""
-			}`
 	)
 	.join("\n\n")}
 
