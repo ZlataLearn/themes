@@ -18,8 +18,17 @@ const writeFileP = (file, data) =>
 
 const getFileNameFromPath = (path) => path.split("/").reverse()[0];
 
+const getSectionNameForLinks = (name) =>
+	name
+		.toLowerCase()
+		.split("`")
+		.join("")
+		.split(" ")
+		.join("-");
+
 module.exports = {
 	readFileP,
 	writeFileP,
 	getFileNameFromPath,
+	getSectionNameForLinks,
 };

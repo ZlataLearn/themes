@@ -1,3 +1,5 @@
+const { getSectionNameForLinks } = require("./utils");
+
 const getReadmeTODO = (unusedLinks) => `# TODO
 
 *Cсылки, которые никуда не ведут*
@@ -11,12 +13,9 @@ ${unusedLinks
 > ${from
 				.map(
 					({ title, currentFileName: link, prevTitle }, index) =>
-						`[${title}](${link}), раздел "[${prevTitle}](${link}#${prevTitle
-							.toLowerCase()
-							.split("`")
-							.join("")
-							.split(" ")
-							.join("-")})"`
+						`[${title}](${link}), раздел "[${prevTitle}](${link}#${getSectionNameForLinks(
+							prevTitle
+						)})"`
 				)
 				.join("<br />")}
 `
