@@ -21,7 +21,7 @@ const getFileNameFromPath = (path) => path.split("/").reverse()[0];
 const getSectionNameForLinks = (name) =>
 	name
 		.toLowerCase()
-		.split("`")
+		.split(/[^а-яёa-z ]+/giu)
 		.join("")
 		.split(" ")
 		.join("-");

@@ -1,8 +1,9 @@
 const { readFileP } = require("./utils");
-const { README_FILENAME, README_LINK_TEXT, linkRegex } = require("./constants");
+const { README_FILENAME } = require("./constants");
 const findDefinition = require("./findDefinition");
 const findTitle = require("./findTitle");
-const { isTitle } = require("./isTitle");
+const findAllTitles = require("./findAllTitles");
+const findUnusedLinks = require("./findUnusedLinks");
 
 const proceedOneFile = ({ files }) => async (currentFileName) => {
 	if (currentFileName === README_FILENAME) {
@@ -11,45 +12,17 @@ const proceedOneFile = ({ files }) => async (currentFileName) => {
 	const data = await readFileP(currentFileName);
 	const lines = data.split("\n");
 	const title = findTitle(lines);
+	const allTitles = findAllTitles(lines, 2);
 	const definition = findDefinition(lines);
-	const unusedLinks = [];
-	{
-		let prevTitle = {
-			index: 0,
-			text: "",
-		};
-		lines.forEach((line, lineIndex) => {
-			if (isTitle(line, 2)) {
-				prevTitle = {
-					index: lineIndex,
-					text: line.replace("## ", ""),
-				};
-			}
-			let result;
-			while ((result = linkRegex.exec(line)) !== null) {
-				if (result[0] === README_LINK_TEXT) {
-					continue;
-				}
-				const [, name, filename] = result;
-				if (files.includes(filename)) {
-					continue;
-				}
-				unusedLinks.push({
-					filename,
-					from: [
-						{
-							title,
-							currentFileName,
-							prevTitle: prevTitle.text,
-						},
-					],
-					names: [name],
-				});
-			}
-		});
-	}
+	const unusedLinks = findUnusedLinks({
+		lines,
+		files,
+		title,
+		currentFileName,
+	});
 	return {
 		title,
+		allTitles,
 		filename: currentFileName,
 		definition,
 		unusedLinks,
