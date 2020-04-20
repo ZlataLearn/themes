@@ -40,7 +40,7 @@ ${unusedLinks
 							.split(" ")
 							.join("-")})"`
 				)
-				.join("<br />> ")}
+				.join("<br />")}
 `
 	)
 	.join("\n")}
