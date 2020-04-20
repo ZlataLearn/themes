@@ -1,7 +1,8 @@
 const { readFileP } = require("./utils");
 const { README_FILENAME, README_LINK_TEXT, linkRegex } = require("./constants");
-const findDefinition = require('./findDefinition');
-const findTitle = require('./findTitle');
+const findDefinition = require("./findDefinition");
+const findTitle = require("./findTitle");
+const { isTitle } = require("./isTitle");
 
 const proceedOneFile = ({ files }) => async (currentFileName) => {
 	if (currentFileName === README_FILENAME) {
@@ -18,7 +19,7 @@ const proceedOneFile = ({ files }) => async (currentFileName) => {
 			text: "",
 		};
 		lines.forEach((line, lineIndex) => {
-			if (line.slice(0, 3) === "## ") {
+			if (isTitle(line, 2)) {
 				prevTitle = {
 					index: lineIndex,
 					text: line.replace("## ", ""),
