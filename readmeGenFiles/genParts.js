@@ -30,7 +30,7 @@ ${data
 	.map(
 		({ title, filename, definition, allTitles }, index) =>
 			`**${index + 1}. [${title}](${filename})**
-> ${definition}
+> ${definition}<br />
 > ${allTitles
 				.map(({ text, link }) => `[${text}](${filename}#${link})`)
 				.join(" • ")}`
