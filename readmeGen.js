@@ -28,17 +28,20 @@ const getReadmeTODO = (unusedLinks) => `# TODO
 ${unusedLinks
 	.map(
 		({ filename, from }) =>
-			`* ${filename} *${from
+			`**${filename}**
+
+> ${from
 				.map(
-					({ currentFileName: link, prevTitle }, index) =>
-						`[src${index + 1}](${link}#${prevTitle
+					({ title, currentFileName: link, prevTitle }, index) =>
+						`[${title}](${link}), раздел "[${prevTitle}](${link}#${prevTitle
 							.toLowerCase()
-							.split('`')
-							.join('')
+							.split("`")
+							.join("")
 							.split(" ")
-							.join("-")})`
+							.join("-")})"`
 				)
-				.join(", ")}*`
+				.join("\n> ")}
+`
 	)
 	.join("\n")}
 
@@ -143,6 +146,7 @@ glob(__dirname + "/*.md", {}, async (err, filesRaw) => {
 							filename,
 							from: [
 								{
+									title,
 									currentFileName,
 									prevTitle: prevTitle.text,
 								},
