@@ -27,8 +27,9 @@ const getReadmeTODO = (unusedLinks) => `# TODO
 
 ${unusedLinks
 	.map(
-		({ filename, from }) =>
-			`**${filename}**
+		({ filename, from, names }) =>
+			`**${filename}**<br />
+*Названия: ${names.map((name) => `"${name}"`).join(", ")}*
 
 > ${from
 				.map(
@@ -151,6 +152,7 @@ glob(__dirname + "/*.md", {}, async (err, filesRaw) => {
 									prevTitle: prevTitle.text,
 								},
 							],
+							names: [name],
 						});
 					}
 				});
@@ -173,6 +175,11 @@ glob(__dirname + "/*.md", {}, async (err, filesRaw) => {
 					acc.push(link);
 				} else {
 					acc[similarIndex].from.push(...link.from);
+					acc[similarIndex].names.push(
+						...link.names.filter(
+							(name) => !acc[similarIndex].names.includes(name)
+						)
+					);
 				}
 			});
 			return acc;
