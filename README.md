@@ -73,11 +73,35 @@
 
 *Cсылки, которые никуда не ведут*
 
-* hof.md *[src1](functions.md#связанные-темы)*
-* strict_mode.md *[src1](scope.md#результаты-поиска), [src2](scope.md#результаты-поиска), [src3](scope.md#примеры), [src4](this.md#правила-привязки-this)*
-* iterators.md *[src1](destructuring.md#массивы)*
-* generators.md *[src1](destructuring.md#массивы)*
-* array_useful_methods.md *[src1](arrays.md#ссылки)*
-* async_promises.md *[src1](async_basics.md#способы-обработки-асинхронности)*
-* async_async_fn.md *[src1](async_basics.md#способы-обработки-асинхронности)*
+**hof.md**
+
+> [Функции](functions.md), раздел "[Связанные темы](functions.md#связанные-темы)"
+
+**strict_mode.md**
+
+> [Область видимости](scope.md), раздел "[Результаты поиска](scope.md#результаты-поиска)"
+> [Область видимости](scope.md), раздел "[Результаты поиска](scope.md#результаты-поиска)"
+> [Область видимости](scope.md), раздел "[Примеры](scope.md#примеры)"
+> [Контекст, `this`](this.md), раздел "[Правила привязки `this`](this.md#правила-привязки-this)"
+
+**iterators.md**
+
+> [Деструктуризация](destructuring.md), раздел "[Массивы](destructuring.md#массивы)"
+
+**generators.md**
+
+> [Деструктуризация](destructuring.md), раздел "[Массивы](destructuring.md#массивы)"
+
+**array_useful_methods.md**
+
+> [Массивы](arrays.md), раздел "[Ссылки](arrays.md#ссылки)"
+
+**async_promises.md**
+
+> [Асинхронность](async_basics.md), раздел "[Способы обработки асинхронности](async_basics.md#способы-обработки-асинхронности)"
+
+**async_async_fn.md**
+
+> [Асинхронность](async_basics.md), раздел "[Способы обработки асинхронности](async_basics.md#способы-обработки-асинхронности)"
+
 
