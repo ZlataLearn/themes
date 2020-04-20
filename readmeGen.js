@@ -136,7 +136,7 @@ glob(__dirname + "/*.md", {}, async (err, filesRaw) => {
 					}
 					let result;
 					while ((result = linkRegex.exec(line)) !== null) {
-						if (result[0] === "[Назад](README.md)") {
+						if (result[0] === `[Назад](${README_FILENAME})`) {
 							continue;
 						}
 						const [, name, filename] = result;
