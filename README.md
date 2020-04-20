@@ -73,11 +73,11 @@
 
 *Cсылки, которые никуда не ведут*
 
-* hof.md *[src1](functions.md)*
-* strict_mode.md *[src1](scope.md), [src2](scope.md), [src3](scope.md), [src4](this.md)*
-* iterators.md *[src1](destructuring.md)*
-* generators.md *[src1](destructuring.md)*
-* array_useful_methods.md *[src1](arrays.md)*
-* async_promises.md *[src1](async_basics.md)*
-* async_async_fn.md *[src1](async_basics.md)*
+* hof.md *[src1](functions.md#связанные-темы)*
+* strict_mode.md *[src1](scope.md#результаты-поиска), [src2](scope.md#результаты-поиска), [src3](scope.md#примеры), [src4](this.md#правила-привязки-this)*
+* iterators.md *[src1](destructuring.md#массивы)*
+* generators.md *[src1](destructuring.md#массивы)*
+* array_useful_methods.md *[src1](arrays.md#ссылки)*
+* async_promises.md *[src1](async_basics.md#способы-обработки-асинхронности)*
+* async_async_fn.md *[src1](async_basics.md#способы-обработки-асинхронности)*
 
