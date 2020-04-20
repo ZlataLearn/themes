@@ -29,7 +29,15 @@ ${unusedLinks
 	.map(
 		({ filename, from }) =>
 			`* ${filename} *${from
-				.map((link, index) => `[src${index + 1}](${link})`)
+				.map(
+					({ currentFileName: link, prevTitle }, index) =>
+						`[src${index + 1}](${link}#${prevTitle
+							.toLowerCase()
+							.split('`')
+							.join('')
+							.split(" ")
+							.join("-")})`
+				)
 				.join(", ")}*`
 	)
 	.join("\n")}
@@ -111,20 +119,37 @@ glob(__dirname + "/*.md", {}, async (err, filesRaw) => {
 			})();
 			const unusedLinks = [];
 			{
-				let result;
-				while ((result = linkRegex.exec(data)) !== null) {
-					if (result[0] === "[Назад](README.md)") {
-						continue;
+				let prevTitle = {
+					index: 0,
+					text: "",
+				};
+				lines.forEach((line, lineIndex) => {
+					if (line.slice(0, 3) === "## ") {
+						prevTitle = {
+							index: lineIndex,
+							text: line.replace("## ", ""),
+						};
 					}
-					const [, name, filename] = result;
-					if (fileNamesArray.includes(filename)) {
-						continue;
+					let result;
+					while ((result = linkRegex.exec(line)) !== null) {
+						if (result[0] === "[Назад](README.md)") {
+							continue;
+						}
+						const [, name, filename] = result;
+						if (fileNamesArray.includes(filename)) {
+							continue;
+						}
+						unusedLinks.push({
+							filename,
+							from: [
+								{
+									currentFileName,
+									prevTitle: prevTitle.text,
+								},
+							],
+						});
 					}
-					unusedLinks.push({
-						filename,
-						from: [currentFileName],
-					});
-				}
+				});
 			}
 			return {
 				title,
