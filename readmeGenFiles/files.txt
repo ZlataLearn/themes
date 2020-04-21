@@ -22,3 +22,4 @@ object_to_primitive.md
 classes.md
 arrays.md
 async_basics.md
+async_promises.md
