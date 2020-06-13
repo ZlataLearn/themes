@@ -163,7 +163,7 @@
 
 
 ## [28. React-компоненты](react-components-1.md)<br />
-[Определение](react-components-1.md#определение) • [Синтаксис](react-components-1.md#синтаксис) • [JSX](react-components-1.md#jsx) • [Принцип работы](react-components-1.md#принцип-работы) • [Состояние](react-components-1.md#состояние) • [Параметры](react-components-1.md#параметры)
+[Определение](react-components-1.md#определение) • [Синтаксис](react-components-1.md#синтаксис) • [JSX](react-components-1.md#jsx) • [Жизненный цикл](react-components-1.md#жизненный-цикл) • [Состояние](react-components-1.md#состояние) • [Параметры](react-components-1.md#параметры) • [Что дальше](react-components-1.md#что-дальше)
 
 > **React-компонент** – отдельная функция или класс (конструктор), которая может быть использована библиотекой React независимо от других компонентов. Инкапсулируют в себе логику и/или отображение. Здесь рассматриваются только функциональные компоненты, описание классовых [здесь](/react-components-classes.md).
 
@@ -211,5 +211,25 @@
 *Названия: "здесь"*
 
 > [React-компоненты](react-components-1.md), раздел "[Определение](react-components-1.md#определение)"
+
+**react-hooks.md**<br />
+*Названия: "хук", "Хуки"*
+
+> [React-компоненты](react-components-1.md), раздел "[Состояние](react-components-1.md#состояние)"<br />[React-компоненты](react-components-1.md), раздел "[Что дальше](react-components-1.md#что-дальше)"
+
+**react-key.md**<br />
+*Названия: "Списки и ключи"*
+
+> [React-компоненты](react-components-1.md), раздел "[Что дальше](react-components-1.md#что-дальше)"
+
+**react-controllable.md**<br />
+*Названия: "Управляемые и неуправляемые компоненты"*
+
+> [React-компоненты](react-components-1.md), раздел "[Что дальше](react-components-1.md#что-дальше)"
+
+**react-lifting-state-up.md**<br />
+*Названия: "Подъем состояния"*
+
+> [React-компоненты](react-components-1.md), раздел "[Что дальше](react-components-1.md#что-дальше)"
 
 
