@@ -63,7 +63,7 @@ const promise = new Promise((resolve, reject) => {
 
 ```javascript
 function asyncSum(a, b) {
-	return new Promise((resolve) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(a + b);
     }, 5000);
@@ -85,12 +85,12 @@ asyncSum(1, 3)
 
 ```javascript
 promise
-	.then((data) => {
-  	console.log(data);
-	})
-	.catch((err) => {
-  	console.error(err);
-	});
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 ```
 
 Функция из `then` будет вызвана с теми данными, которые будут переданы в `resolve`, а функция из `catch` – с данными из `reject`.
@@ -103,25 +103,25 @@ promise
 
 ```javascript
 makeRequest(urlOne) // вернет первый промис
-	.then((data) => { // подписываемся на него
-		if (data.ok) {
-			return makeRequest(urlTwo) // возвращаем второй
-		}
-	})
-	.then((data) => { // подписываемся на второй
-		if (data.ok) {
-			return makeRequest(urlThree) // возвращаем третий
-		}
-	})
-	.then(() => console.log('Done.')); // подписываемся на третий
+  .then((data) => { // подписываемся на него
+  	if (data.ok) {
+  		return makeRequest(urlTwo) // возвращаем второй
+  	}
+  })
+  .then((data) => { // подписываемся на второй
+  	if (data.ok) {
+  		return makeRequest(urlThree) // возвращаем третий
+  	}
+  })
+  .then(() => console.log('Done.')); // подписываемся на третий
 ```
 
 ```javascript
 makeAuthRequest()
-	.then(makeMoneyTransferRequest)
-	.then(makeNotificationRequest)
-	.then(writeToLog)
-	.then(makeLogoutRequest);
+  .then(makeMoneyTransferRequest)
+  .then(makeNotificationRequest)
+  .then(writeToLog)
+  .then(makeLogoutRequest);
 ```
 
 Таким образом запросы будут выполняться **последовательно**, то есть следующий будет начинаться только тогда, когда закончился предыдущий. 
@@ -137,11 +137,11 @@ makeAuthRequest()
 
 ```javascript
 doSomething()
-	.then(doSomethingElse)
-	.then(doSomethingElse2)
-	.then(doSomethingElse3)
-	.then(doSomethingElse4)
-	.catch((error) => {...})
+  .then(doSomethingElse)
+  .then(doSomethingElse2)
+  .then(doSomethingElse3)
+  .then(doSomethingElse4)
+  .catch((error) => {...})
 ```
 
 > Функция из `catch` будет вызвана при возникновении ошибки где-либо выше неё в цепочке.
@@ -163,7 +163,7 @@ Promise.all([
   requestTwo(), 
   requestThree()
 ]).then((results) => {
-	const [resultOne, resultTwo, resultThree] = results;
+  const [resultOne, resultTwo, resultThree] = results;
 });
 ```
 
@@ -180,12 +180,12 @@ Promise.all([
 >
 > ```javascript
 > doSomething()
-> 	.then(() => {
->   		return Promise.reject();
-> 	})
-> 	.then(makeRequest)
-> 	.then(showPopup)
-> 	.catch(() => {...})
+>   .then(() => {
+>     	return Promise.reject();
+>   })
+>   .then(makeRequest)
+>   .then(showPopup)
+>   .catch(() => {...})
 > ```
 >
 > После `return Promise.reject();` будет сразу вызвана функция из `catch`.
@@ -214,7 +214,7 @@ function makeRequestPromise(url, data) {
 }
 
 makeRequestPromise('https://google.com', { search: 'котики' })
-	.then(...)
+  .then(...)
 ```
 
 Тогда `makeRequestPromise` можно будет использовать вместо `makeRequest` и пользоваться всеми возможностями, предоставляемыми промисами, например, работать с [асинхронными функциями](async_async_fn.md). 

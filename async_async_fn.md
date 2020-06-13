@@ -43,10 +43,10 @@ const result = await axios.get("https://google.com");
 >
 > ```javascript
 > doSomething()
-> 	.then(doSomethingElse)
-> 	.then(doSomethingElse2)
-> 	.then(doSomethingElse3)
-> 	.then(doSomethingElse4)
+>   .then(doSomethingElse)
+>   .then(doSomethingElse2)
+>   .then(doSomethingElse3)
+>   .then(doSomethingElse4)
 > ```
 >
 > В таком виде:
@@ -69,7 +69,7 @@ try {
   const result = await axios.get("https://google.com");
   // любой код
 } catch(error) {
- 	// обработка ошибки 
+   // обработка ошибки 
 }
 ```
 

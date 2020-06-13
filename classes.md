@@ -50,9 +50,9 @@ class ИмяКласса extends ИмяРодительскогоКласса {
 > ```javascript
 > class Cat extends Animal {
 >   species = "cat";
-> 	age = 0;
-> 	getSomething() {
->  		return 10;   
+>   age = 0;
+>   getSomething() {
+>    	return 10;   
 >   };
 > }
 > ```
@@ -207,7 +207,7 @@ class Cat extends Animal {
 
 ```javascript
 function Animal(species) {
-	this.species = species;
+  this.species = species;
 };
 Animal.prototype = {
   speak() {

@@ -43,7 +43,7 @@ const dobby = new Animal("cat", 30, 4, 5.8);
 
 ```javascript
 {
-	species: "cat",
+  species: "cat",
   height: 30,
   age: 4,
   weight: 5.8,
@@ -72,10 +72,10 @@ dobby.grow();
 
 ```javascript
 dobby будет содержать {
-	species: "cat",
-	height: 30.6,
-	age: 5,
-	weight: 6.032,
+  species: "cat",
+  height: 30.6,
+  age: 5,
+  weight: 6.032,
 }
 ```
 
@@ -96,8 +96,8 @@ dobby instanceof Object // тоже true, потому что Animal "унасл
 
 ```javascript
 function Cat(height, age, weight) {
-	Animal.call(this, 'cat', height, age, weight);
-	this.fur = true;
+  Animal.call(this, 'cat', height, age, weight);
+  this.fur = true;
 }
 
 Cat.prototype = {

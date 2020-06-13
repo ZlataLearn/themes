@@ -44,7 +44,7 @@ React-компонент технически – обычная функция
 >   return (
 >     <div className="input">
 >       <div className="input__label">
->        	{label}
+>          {label}
 >       </div>
 >       <input
 >         className="input__input"

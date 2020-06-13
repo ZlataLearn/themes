@@ -267,7 +267,7 @@ for (let key in object) {
 ```javascript
 let object = { a: 1, b: 2 };
 let newObject = {
-	...object,
+  ...object,
 };
 // newObject  хранит { a: 1, b: 2 }
 ```

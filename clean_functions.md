@@ -39,7 +39,7 @@ function calcSum(a, b, c) {
 
 ```javascript
 function getTime() {
-	const d = new Date();
+  const d = new Date();
   return d.getTime();
 }
 ```
