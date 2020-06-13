@@ -217,6 +217,11 @@
 
 > [React-компоненты](react-components-1.md), раздел "[Состояние](react-components-1.md#состояние)"<br />[React-компоненты](react-components-1.md), раздел "[Что дальше](react-components-1.md#что-дальше)"
 
+**react-reconciliation.md**<br />
+*Названия: "сверки"*
+
+> [React-компоненты](react-components-1.md), раздел "[Состояние](react-components-1.md#состояние)"
+
 **react-key.md**<br />
 *Названия: "Списки и ключи"*
 
