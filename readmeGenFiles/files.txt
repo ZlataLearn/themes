@@ -32,3 +32,4 @@ react-controllable.md
 react-hooks.md
 react-useState.md
 react-useRef.md
+react-useEffect.md

@@ -198,6 +198,12 @@
 > **useRef** – хук для получения ссылки на DOM-элемент.
 
 
+## [34. useEffect и useLayoutEffect](react-useEffect.md)<br />
+[Определение](react-useEffect.md#определение) • [Когда используется](react-useEffect.md#когда-используется) • [API](react-useEffect.md#api) • [Сразу сложный пример](react-useEffect.md#сразу-сложный-пример) • [Принцип работы](react-useEffect.md#принцип-работы) • [Отличие `useEffect` и `useLayoutEffect`](react-useEffect.md#отличие-useeffect-и-uselayouteffect) • [Оптимизация частоты обновления](react-useEffect.md#оптимизация-частоты-обновления) • [Что дальше](react-useEffect.md#что-дальше)
+
+> **useEffect и useLayoutEffect** – хуки для организации дополнительных действий, которые должны выполняться после отрисовки.
+
+
 # TODO
 
 *Cсылки, которые никуда не ведут*
@@ -251,11 +257,6 @@
 *Названия: "Подъем состояния"*
 
 > [React-компоненты](react-components-1.md), раздел "[Что дальше](react-components-1.md#что-дальше)"
-
-**react-useEffect.md**<br />
-*Названия: "useEffect", "useLayoutEffect"*
-
-> [Хуки](react-hooks.md), раздел "[Определение](react-hooks.md#определение)"<br />[Хуки](react-hooks.md), раздел "[Определение](react-hooks.md#определение)"
 
 **react-useMemo.md**<br />
 *Названия: "useMemo"*
