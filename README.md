@@ -192,6 +192,12 @@
 > **useState** – хук для управления состоянием компонента.
 
 
+## [33. useRef](react-useRef.md)<br />
+[Определение](react-useRef.md#определение) • [Когда используется](react-useRef.md#когда-используется) • [API](react-useRef.md#api) • [Примеры](react-useRef.md#примеры)
+
+> **useRef** – хук для получения ссылки на DOM-элемент.
+
+
 # TODO
 
 *Cсылки, которые никуда не ведут*
@@ -245,11 +251,6 @@
 *Названия: "Подъем состояния"*
 
 > [React-компоненты](react-components-1.md), раздел "[Что дальше](react-components-1.md#что-дальше)"
-
-**react-useRef.md**<br />
-*Названия: "useRef"*
-
-> [Хуки](react-hooks.md), раздел "[Определение](react-hooks.md#определение)"
 
 **react-useEffect.md**<br />
 *Названия: "useEffect", "useLayoutEffect"*
