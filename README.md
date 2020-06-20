@@ -181,9 +181,15 @@
 
 
 ## [31. Хуки](react-hooks.md)<br />
-[Определение](react-hooks.md#определение) • [Правила хуков](react-hooks.md#правила-хуков)
+[Определение](react-hooks.md#определение) • [Правила хуков](react-hooks.md#правила-хуков) • [Что дальше](react-hooks.md#что-дальше)
 
 > **Хуки** в React – встроенные функции, позволяющие расширять работу компонентов.
+
+
+## [32. useState](react-useState.md)<br />
+[Определение](react-useState.md#определение) • [Когда используется](react-useState.md#когда-используется) • [API](react-useState.md#api) • [Примеры](react-useState.md#примеры)
+
+> **useState** – хук для управления состоянием компонента.
 
 
 # TODO
@@ -240,11 +246,6 @@
 
 > [React-компоненты](react-components-1.md), раздел "[Что дальше](react-components-1.md#что-дальше)"
 
-**react-useState.md**<br />
-*Названия: "useState"*
-
-> [Хуки](react-hooks.md), раздел "[Определение](react-hooks.md#определение)"
-
 **react-useRef.md**<br />
 *Названия: "useRef"*
 
@@ -279,5 +280,10 @@
 *Названия: "useReducer"*
 
 > [Хуки](react-hooks.md), раздел "[Определение](react-hooks.md#определение)"
+
+**react-custom-hooks.md**<br />
+*Названия: "Переиспользование хуков, кастомные хуки"*
+
+> [Хуки](react-hooks.md), раздел "[Что дальше](react-hooks.md#что-дальше)"
 
 
