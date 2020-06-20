@@ -36,4 +36,5 @@
 
 ## Что дальше
 
+* [Про хуки в документации](https://ru.reactjs.org/docs/hooks-reference.html)
 * [Переиспользование хуков, кастомные хуки](react-custom-hooks.md)
