@@ -180,6 +180,12 @@
 > Концепция разделения компонентов на **управляемые и неуправляемые** позволяет более явно определять место хранения логики компонентов и то, как с ними можно будет работать.
 
 
+## [31. Хуки](react-hooks.md)<br />
+[Определение](react-hooks.md#определение) • [Правила хуков](react-hooks.md#правила-хуков)
+
+> **Хуки** в React – встроенные функции, позволяющие расширять работу компонентов.
+
+
 # TODO
 
 *Cсылки, которые никуда не ведут*
@@ -224,11 +230,6 @@
 
 > [React-компоненты](react-components-1.md), раздел "[Определение](react-components-1.md#определение)"
 
-**react-hooks.md**<br />
-*Названия: "хук", "Хуки"*
-
-> [React-компоненты](react-components-1.md), раздел "[Состояние](react-components-1.md#состояние)"<br />[React-компоненты](react-components-1.md), раздел "[Что дальше](react-components-1.md#что-дальше)"
-
 **react-reconciliation.md**<br />
 *Названия: "сверки", "Подробнее про процесс reconciliation"*
 
@@ -238,5 +239,45 @@
 *Названия: "Подъем состояния"*
 
 > [React-компоненты](react-components-1.md), раздел "[Что дальше](react-components-1.md#что-дальше)"
+
+**react-useState.md**<br />
+*Названия: "useState"*
+
+> [Хуки](react-hooks.md), раздел "[Определение](react-hooks.md#определение)"
+
+**react-useRef.md**<br />
+*Названия: "useRef"*
+
+> [Хуки](react-hooks.md), раздел "[Определение](react-hooks.md#определение)"
+
+**react-useEffect.md**<br />
+*Названия: "useEffect", "useLayoutEffect"*
+
+> [Хуки](react-hooks.md), раздел "[Определение](react-hooks.md#определение)"<br />[Хуки](react-hooks.md), раздел "[Определение](react-hooks.md#определение)"
+
+**react-useMemo.md**<br />
+*Названия: "useMemo"*
+
+> [Хуки](react-hooks.md), раздел "[Определение](react-hooks.md#определение)"
+
+**react-useCallback.md**<br />
+*Названия: "useCallback"*
+
+> [Хуки](react-hooks.md), раздел "[Определение](react-hooks.md#определение)"
+
+**react-useContext.md**<br />
+*Названия: "useContext"*
+
+> [Хуки](react-hooks.md), раздел "[Определение](react-hooks.md#определение)"
+
+**react-context.md**<br />
+*Названия: "контекстом"*
+
+> [Хуки](react-hooks.md), раздел "[Определение](react-hooks.md#определение)"
+
+**react-useReducer.md**<br />
+*Названия: "useReducer"*
+
+> [Хуки](react-hooks.md), раздел "[Определение](react-hooks.md#определение)"
 
 
