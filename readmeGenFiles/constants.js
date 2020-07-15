@@ -1,6 +1,6 @@
 const README_FILENAME = "README.md";
 const README_LINK_TEXT = `[Назад](${README_FILENAME})`;
-const DEFINITION_LINE = "## Определение";
+const DEFINITION_LINE = "## Определени";
 const linkRegex = /\[([^\]]*)\]\(([^)]*\.md)\)/giu;
 const listFilePath = "./readmeGenFiles/files.txt";
 const TITLE_PREFIXES = {
