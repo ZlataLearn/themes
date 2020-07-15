@@ -1,3 +1,36 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+[Назад](README.md)<br />**Содержание**
+
+- [Базы данных и SQL](#%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%B8-sql)
+  - [Определения](#%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F)
+  - [Реляционные базы данных](#%D1%80%D0%B5%D0%BB%D1%8F%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)
+    - [Таблицы](#%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D1%8B)
+      - [`books`](#books)
+      - [`authors`](#authors)
+    - [Связи между таблицами](#%D1%81%D0%B2%D1%8F%D0%B7%D0%B8-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0%D0%BC%D0%B8)
+      - [Один к одному](#%D0%BE%D0%B4%D0%B8%D0%BD-%D0%BA-%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC%D1%83)
+      - [Один ко многим](#%D0%BE%D0%B4%D0%B8%D0%BD-%D0%BA%D0%BE-%D0%BC%D0%BD%D0%BE%D0%B3%D0%B8%D0%BC)
+      - [Многие ко многим](#%D0%BC%D0%BD%D0%BE%D0%B3%D0%B8%D0%B5-%D0%BA%D0%BE-%D0%BC%D0%BD%D0%BE%D0%B3%D0%B8%D0%BC)
+        - [`readers`](#readers)
+        - [`readers_books`](#readers_books)
+    - [Индексы](#%D0%B8%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D1%8B)
+  - [SQL](#sql)
+    - [Чтение данных, `SELECT`](#%D1%87%D1%82%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-select)
+      - [Список полей](#%D1%81%D0%BF%D0%B8%D1%81%D0%BE%D0%BA-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B9)
+      - [Название таблицы](#%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D1%8B)
+      - [Условие](#%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5)
+      - [Сортировка](#%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0)
+      - [Лимит](#%D0%BB%D0%B8%D0%BC%D0%B8%D1%82)
+      - [Пример запроса](#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%B0)
+    - [Добавление данных, `INSERT`](#%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-insert)
+    - [Удаление данных, `DELETE`](#%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-delete)
+    - [Обновление данных, `UPDATE`](#%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-update)
+    - [Подзапросы](#%D0%BF%D0%BE%D0%B4%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D1%8B)
+  - [TODO:](#todo)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Базы данных и SQL
 
 ## Определения
