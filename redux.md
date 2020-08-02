@@ -385,9 +385,9 @@ import { updatePhoto } from './store/actions';
 const Component = () => {
   const photo = useSelector(store => store.account.photo);
   const loading = useSelector(store => store.account.loading);
-  const dispatch = useDispatch('https://placekitten.com/100/100');
+  const dispatch = useDispatch();
   // ...
-  dispatch(updatePhoto())
+  dispatch(updatePhoto('https://placekitten.com/100/100'))
   // ...
   
   if (loading) {
