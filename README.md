@@ -222,6 +222,12 @@
 > **Кастомным** называют хуки, созданные с помощью встроенных в react хуков. Такие хуки можно выносить из компонентов и переиспользовать в других местах.
 
 
+## [38. Классовые компоненты](react-components-classes.md)<br />
+[Определение](react-components-classes.md#определение) • [Синтаксис](react-components-classes.md#синтаксис) • [Использование](react-components-classes.md#использование) • [Жизненный цикл](react-components-classes.md#жизненный-цикл) • [API компонентов](react-components-classes.md#api-компонентов) • [Свойства `this`](react-components-classes.md#свойства-this) • [Свойства класса](react-components-classes.md#свойства-класса) • [Пример компонента со счетчиком](react-components-classes.md#пример-компонента-со-счетчиком) • [Осторожность с контекстом](react-components-classes.md#осторожность-с-контекстом)
+
+> **Классовые компоненты** – реакт-компоненты, описанные не в виде функции, а в виде класса/конструктора.
+
+
 # TODO
 
 *Cсылки, которые никуда не ведут*
@@ -260,11 +266,6 @@
 *Названия: "селекторы по атрибуту"*
 
 > [Основы CSS](css_basics.md), раздел "[Виды селекторов](css_basics.md#виды-селекторов)"
-
-**react-components-classes.md**<br />
-*Названия: "здесь"*
-
-> [React-компоненты](react-components-1.md), раздел "[Определение](react-components-1.md#определение)"
 
 **react-reconciliation.md**<br />
 *Названия: "сверки", "Подробнее про процесс reconciliation"*

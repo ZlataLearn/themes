@@ -36,3 +36,4 @@ react-useEffect.md
 redux.md
 db.md
 react-custom-hooks.md
+react-components-classes.md
