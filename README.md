@@ -1,7 +1,7 @@
 # Список файлов
 
 ## [1. Словарь](vocabulary.md)<br />
-[Нативно/нативное](vocabulary.md#нативнонативное) • [Императивное программирование](vocabulary.md#императивное-программирование) • [Декларативное программирование](vocabulary.md#декларативное-программирование) • [Спрайты](vocabulary.md#спрайты) • [Микроразметка](vocabulary.md#микроразметка) • [Docker](vocabulary.md#docker) • [Nginx](vocabulary.md#nginx) • [Автотесты](vocabulary.md#автотесты) • [Gracefull degradation](vocabulary.md#gracefull-degradation) • [Progressive enhancement](vocabulary.md#progressive-enhancement) • [Express.js](vocabulary.md#expressjs)
+[Нативно/нативное](vocabulary.md#нативнонативное) • [Императивное программирование](vocabulary.md#императивное-программирование) • [Декларативное программирование](vocabulary.md#декларативное-программирование) • [Спрайты](vocabulary.md#спрайты) • [Микроразметка](vocabulary.md#микроразметка) • [Docker](vocabulary.md#docker) • [Nginx](vocabulary.md#nginx) • [CI/CD](vocabulary.md#cicd) • [Автотесты](vocabulary.md#автотесты) • [Gracefull degradation](vocabulary.md#gracefull-degradation) • [Progressive enhancement](vocabulary.md#progressive-enhancement) • [Express.js](vocabulary.md#expressjs)
 
 > Набор не связанных друг с другом определений.
 
