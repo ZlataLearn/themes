@@ -37,3 +37,4 @@ redux.md
 db.md
 react-custom-hooks.md
 react-components-classes.md
+vocabulary.md
