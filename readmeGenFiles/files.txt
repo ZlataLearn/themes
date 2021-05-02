@@ -1,4 +1,5 @@
 README.md
+vocabulary.md
 practice.md
 variables.md
 types.md
@@ -37,4 +38,3 @@ redux.md
 db.md
 react-custom-hooks.md
 react-components-classes.md
-vocabulary.md
